@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUIPass</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <main class="main">
+            <p class="title">Gere sua senha</p>
+            <form id="form">
+                <input type="text" name="pass" id="pass" readonly>
+                <div class="scroll">
+                    <input type="range" value="4" min="4" max="20" id="range">
+                    <span id="rangeValue">4</span>
+                </div>
+                <div class="inputs">
+                    <label class="check">
+                        <input type="checkbox" name="lowercase" id="lowercase"> Letras minúsculas
+                    </label>
+                    <label class="check">
+                        <input type="checkbox" name="uppercase" id="uppercase"> Letras maiúsculas
+                    </label>
+                    <label class="check">
+                        <input type="checkbox" name="numbers" id="numbers"> Números
+                    </label>
+                    <label class="check">
+                        <input type="checkbox" name="symbols" id="symbols"> Símbolos
+                    </label>
+                </div>
+                <button type="button" id="button">Gerar</button>
+            </form>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
