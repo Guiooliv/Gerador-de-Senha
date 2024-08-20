@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -13,22 +13,25 @@
         <main class="main">
             <p class="title">Gere sua senha</p>
             <form id="form">
-                <input type="text" name="pass" id="pass" readonly>
-                <div class="scroll">
+                <div class="bloco-senha">
+                    <input type="text" name="pass" id="pass" readonly>
+                    <p id="copyMessage" style="display: none;">Copiado!</p>
+                </div>
+                <div class="bloco-scroll">
                     <input type="range" value="4" min="4" max="20" id="range">
                     <span id="rangeValue">4</span>
                 </div>
-                <div class="inputs">
-                    <label>
+                <div class="bloco-inputs">
+                    <label class="check">
                         <input type="checkbox" name="lowercase" id="lowercase"> Letras minúsculas
                     </label>
-                    <label>
+                    <label class="check">
                         <input type="checkbox" name="uppercase" id="uppercase"> Letras maiúsculas
                     </label>
-                    <label>
+                    <label class="check">
                         <input type="checkbox" name="numbers" id="numbers"> Números
                     </label>
-                    <label>
+                    <label class="check">
                         <input type="checkbox" name="symbols" id="symbols"> Símbolos
                     </label>
                 </div>

@@ -33,7 +33,7 @@ function gerarSenha(length, min, mai, num, sim) {
     }
 
     if (caracteres.length == 0) {
-        return "Selecione pelo menos uma opção";
+        return "Marque pelo menos uma opção";
     }
 
     let password = ""
@@ -58,3 +58,21 @@ let value = document.getElementById("rangeValue")
 range.addEventListener('input', () =>{
     rangeValue.textContent = range.value
 })
+
+document.getElementById("pass").addEventListener('click', copyText)
+
+function copyText(){
+    let text = document.getElementById("pass").value
+
+    if(text === "" || text === "Marque pelo menos uma opção"){
+        return
+    }
+
+    navigator.clipboard.writeText(text).then(() => {
+        const copyMessage = document.getElementById("copyMessage")
+        copyMessage.style.display = "block" 
+        setTimeout(() =>{
+            copyMessage.style.display = "none" 
+        }, 3000)
+    })
+}
